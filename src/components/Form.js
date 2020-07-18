@@ -1,12 +1,26 @@
 import React from 'react'
 import styles from './Form.module.css'
+import useSelect from './../hooks/useSelect'
 
 const Form = () => {
+  const OPTIONS = [
+    { value: 'general', label: 'General' },
+    { value: 'business', label: 'Negocios' },
+    { value: 'entertaiment', label: 'Entretenimiento' },
+    { value: 'health', label: 'Salud' },
+    { value: 'sports', label: 'Deportes' },
+    { value: 'technology', label: 'Tecnologia' },
+  ]
+
+  // Custom hook
+  const [category, NewsSelect] = useSelect('general', OPTIONS)
+
   return (
     <div className={`${styles.searcher} row`}>
       <div className="col s12 m8 offset-m2">
         <form>
           <h2 className={styles.heading}>Noticias por categoria</h2>
+          <NewsSelect />
           <div className="input-field col s12">
             <input
               type="submit"
