@@ -5,8 +5,8 @@ import useSelect from './../hooks/useSelect'
 const Form = ({ saveCategory }) => {
   const OPTIONS = [
     { value: 'general', label: 'General' },
-    { value: 'business', label: 'Negocios' },
-    { value: 'entertaiment', label: 'Entretenimiento' },
+    /* { value: 'business', label: 'Negocios' },
+    { value: 'entertaiment', label: 'Entretenimiento' }, */
     { value: 'health', label: 'Salud' },
     { value: 'sports', label: 'Deportes' },
     { value: 'technology', label: 'Tecnologia' },
