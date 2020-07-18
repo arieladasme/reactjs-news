@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import Header from './components/Header'
 import Form from './components/Form'
+import NewsList from './components/NewsList'
 
 function App() {
   // Category and news
@@ -24,6 +25,7 @@ function App() {
       <Header title="Buscador de noticias" />
       <div className="container white">
         <Form saveCategory={saveCategory} />
+        <NewsList news={news} />
       </div>
     </Fragment>
   )
